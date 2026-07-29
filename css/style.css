@@ -1215,9 +1215,29 @@ footer {
 
 .location-icon {
 
-    font-size:45px;
+    font-size:55px;
 
-    animation: locationFloat 3s infinite;
+    display:inline-block;
+
+    animation: locationFloat 2s ease-in-out infinite;
+
+}
+
+
+@keyframes locationFloat {
+
+    0%,100% {
+
+        transform: translateY(0);
+
+    }
+
+
+    50% {
+
+        transform: translateY(-15px);
+
+    }
 
 }
 
