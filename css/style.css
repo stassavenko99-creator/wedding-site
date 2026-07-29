@@ -1215,14 +1215,11 @@ footer {
 
 .location-icon {
 
-    font-size:55px;
+    font-size:80px;
 
-    display:inline-block;
-
-    animation: locationFloat 2s ease-in-out infinite;
+    background:red;
 
 }
-
 
 @keyframes locationFloat {
 
