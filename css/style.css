@@ -1074,26 +1074,3 @@ footer {
         transform: scale(1.25);
 
     }
-/* TEST CALENDAR */
-
-.calendar-grid {
-    display: grid !important;
-    grid-template-columns: repeat(7, 1fr) !important;
-    gap: 10px !important;
-    background: red !important;
-    padding: 20px !important;
-}
-
-.calendar-grid span {
-    background: white !important;
-    border-radius: 50%;
-    aspect-ratio: 1;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-}
-
-}
-.calendar-grid {
-    background: red !important;
-}
