@@ -19,3 +19,162 @@
     }
 
 }
+
+/* ======================================
+   ДОФАМИНОВЫЙ ДЕКОР САЙТА
+====================================== */
+
+
+/* Плавный фон между секциями */
+
+body {
+
+    background:
+    linear-gradient(
+        180deg,
+        #FFFBF6 0%,
+        #fff8fb 50%,
+        #f7fbff 100%
+    );
+
+}
+
+
+
+/* Цветные декоративные пятна */
+
+
+section {
+
+    position:relative;
+
+}
+
+
+
+section::before {
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    background:#E695D2;
+
+    opacity:.15;
+
+    filter:blur(30px);
+
+    top:10%;
+
+    left:-40px;
+
+    animation:floatBlob 8s ease-in-out infinite;
+
+}
+
+
+
+section::after {
+
+    content:"";
+
+    position:absolute;
+
+    width:100px;
+
+    height:100px;
+
+    border-radius:50%;
+
+    background:#F2BA6C;
+
+    opacity:.15;
+
+    filter:blur(30px);
+
+    bottom:10%;
+
+    right:-30px;
+
+    animation:floatBlob 10s ease-in-out infinite reverse;
+
+}
+
+
+
+@keyframes floatBlob {
+
+
+    0%,100% {
+
+        transform:translateY(0);
+
+    }
+
+
+    50% {
+
+        transform:translateY(-30px);
+
+    }
+
+}
+
+
+
+
+/* Карточки становятся живыми */
+
+
+.section-card {
+
+    transition:
+
+    transform .4s ease,
+
+    box-shadow .4s ease;
+
+}
+
+
+
+.section-card:hover {
+
+    transform:
+
+    translateY(-8px);
+
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.12);
+
+}
+
+
+
+/* Кнопки */
+
+button {
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+button:hover {
+
+    transform:
+
+    translateY(-3px);
+
+}
