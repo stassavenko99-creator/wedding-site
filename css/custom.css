@@ -1,3 +1,19 @@
+.full-section {
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
 .location-pin {
 
     font-size: 50px;
