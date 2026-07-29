@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Стас & Настя | 17 октября 2026</title>
+
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Наши стили (создадим позже) -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+<!-- ==========================================
+     НАСТРОЙКИ САЙТА
+     Потом вынесем в отдельный settings.js
+========================================== -->
+
+<script>
+
+const WEDDING_SETTINGS = {
+
+    groom: "Стас",
+
+    bride: "Настя",
+
+    date: "17 октября 2026",
+
+    city: "Екатеринбург",
+
+    venue: "Отель Высоцкий",
+
+    musicEnabled: true
+
+};
+
+</script>
+
+
+
+<!-- ==========================================
+     HERO SECTION
+     Первый экран
+========================================== -->
+
+<section class="hero">
+
+    <!-- Сюда потом поставим вашу фотографию -->
+    <div class="hero-photo">
+        
+    </div>
+
+
+    <div class="hero-content">
+
+        <h1>
+            Стас
+            <span>&</span>
+            Настя
+        </h1>
+
+
+        <p class="hero-date">
+            17 октября 2026
+        </p>
+
+
+        <button class="music-button">
+            🎵 Включить атмосферу
+        </button>
+
+
+    </div>
+
+
+    <div class="scroll-down">
+        ↓
+    </div>
+
+
+</section>
+
+
+
+
+<!-- ==========================================
+     ПРИВЕТСТВИЕ
+========================================== -->
+
+<section class="welcome">
+
+    <div class="section-card">
+
+        <h2>
+            Мы женимся ❤️
+        </h2>
+
+
+        <p>
+            И очень хотим разделить этот день
+            с теми, кто нам дорог.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- ==========================================
+     КАЛЕНДАРЬ
+========================================== -->
+
+<section class="calendar-section">
+
+
+    <div class="section-card calendar-card">
+
+        <h2>
+            Когда?
+        </h2>
+
+
+        <div class="calendar">
+
+            <div class="month">
+                Октябрь 2026
+            </div>
+
+
+            <div class="days">
+
+                <span>Пн</span>
+                <span>Вт</span>
+                <span>Ср</span>
+                <span>Чт</span>
+                <span>Пт</span>
+                <span>Сб</span>
+                <span>Вс</span>
+
+
+                <!-- календарь заполним позже -->
+
+            </div>
+
+
+            <div class="selected-date">
+                17
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================================
+     МЕСТО
+========================================== -->
+
+
+<section class="location">
+
+
+    <div class="section-card">
+
+        <h2>
+            Где?
+        </h2>
+
+
+        <h3>
+            Екатеринбург
+        </h3>
+
+
+        <p>
+            Отель Высоцкий
+        </p>
+
+
+        <button>
+            Открыть карту
+        </button>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================================
+     ТАЙМИНГ
+========================================== -->
+
+
+<section class="timeline">
+
+
+    <div class="section-card">
+
+        <h2>
+            План дня
+        </h2>
+
+
+        <div class="timeline-item">
+
+            <span>
+                15:00
+            </span>
+
+            <p>
+                Сбор гостей
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <span>
+                16:00
+            </span>
+
+            <p>
+                Церемония
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <span>
+                17:00
+            </span>
+
+            <p>
+                Праздник
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================================
+     ДРЕСС-КОД
+========================================== -->
+
+
+<section class="dress-code">
+
+
+    <div class="section-card">
+
+        <h2>
+            Дресс-код
+        </h2>
+
+
+        <p>
+            Наша свадьба — дофаминовая.
+            Добавьте цвета и настроение.
+        </p>
+
+
+        <div class="colors">
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================================
+     ФОТОГРАФИИ
+========================================== -->
+
+
+<section class="gallery">
+
+
+    <div class="section-card">
+
+        <h2>
+            Мы
+        </h2>
+
+
+        <div class="photos">
+
+            <!-- фотографии добавим позже -->
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================================
+     RSVP ФОРМА
+========================================== -->
+
+
+<section class="rsvp">
+
+
+<div class="section-card">
+
+
+<h2>
+    Анкета гостя
+</h2>
+
+
+<form id="guest-form">
+
+
+<input 
+type="text" 
+placeholder="Имя и фамилия"
+>
+
+
+<input 
+type="text" 
+placeholder="Ваш город"
+>
+
+
+<input 
+type="tel" 
+placeholder="Телефон"
+>
+
+
+<h3>
+Вы придете?
+</h3>
+
+
+<button type="button">
+    Да ❤️
+</button>
+
+
+<button type="button">
+    Не смогу
+</button>
+
+
+
+<h3>
+Предпочтения по алкоголю
+</h3>
+
+
+<textarea 
+placeholder="Напишите ваши предпочтения">
+</textarea>
+
+
+
+<button type="submit">
+
+Отправить
+
+</button>
+
+
+</form>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<footer>
+
+    Стас & Настя ❤️
+
+</footer>
+
+
+
+
+<!-- Скрипты -->
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>
