@@ -1,0 +1,334 @@
+/*
+==========================================
+
+СТАС & НАСТЯ
+Wedding Website
+
+FILE:
+animations.css
+
+VERSION:
+0.1
+
+Здесь только анимации:
+✓ появление блоков
+✓ движение фона
+✓ кнопки
+✓ плавность
+
+==========================================
+*/
+
+
+
+/* ======================================
+   🌈 ЖИВОЙ ФОН HERO
+====================================== */
+
+
+.hero-photo {
+
+    animation:
+
+    backgroundMove 12s ease-in-out infinite alternate;
+
+}
+
+
+
+@keyframes backgroundMove {
+
+
+    from {
+
+        transform:
+
+        scale(1);
+
+    }
+
+
+    to {
+
+        transform:
+
+        scale(1.08);
+
+    }
+
+
+}
+
+
+
+
+/* ======================================
+   ✨ ПОЯВЛЕНИЕ ЭЛЕМЕНТОВ
+====================================== */
+
+
+.hero-content {
+
+
+    animation:
+
+    heroAppear 1.5s ease forwards;
+
+
+}
+
+
+
+@keyframes heroAppear {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+
+        translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
+    }
+
+
+}
+
+
+
+
+
+/* ======================================
+   🫧 КАРТОЧКИ
+====================================== */
+
+
+.section-card {
+
+
+    transition:
+
+    transform .5s ease,
+
+    box-shadow .5s ease;
+
+
+}
+
+
+
+.section-card:hover {
+
+
+    transform:
+
+    translateY(-8px);
+
+
+}
+
+
+
+
+
+/* ======================================
+   💗 КНОПКИ
+====================================== */
+
+
+button {
+
+
+    transition:
+
+    transform .25s ease,
+
+    box-shadow .25s ease;
+
+
+}
+
+
+
+button:hover {
+
+
+    transform:
+
+    scale(1.05);
+
+
+    box-shadow:
+
+    0 15px 30px rgba(0,0,0,.12);
+
+
+}
+
+
+
+button:active {
+
+
+    transform:
+
+    scale(.95);
+
+
+}
+
+
+
+
+
+/* ======================================
+   🎨 ЦВЕТНЫЕ ПЯТНА НА ФОНЕ
+====================================== */
+
+
+section {
+
+
+    position:
+
+    relative;
+
+
+}
+
+
+
+section::before {
+
+
+    content:"";
+
+
+    position:
+
+    absolute;
+
+
+    width:
+
+    180px;
+
+
+    height:
+
+    180px;
+
+
+    border-radius:
+
+    50%;
+
+
+    background:
+
+    rgba(238,210,89,.18);
+
+
+    filter:
+
+    blur(50px);
+
+
+    z-index:
+
+    -1;
+
+
+    animation:
+
+    floatBlob 10s infinite alternate;
+
+
+}
+
+
+
+
+
+@keyframes floatBlob {
+
+
+    from {
+
+
+        transform:
+
+        translate(0,0);
+
+
+    }
+
+
+    to {
+
+
+        transform:
+
+        translate(80px,40px);
+
+
+    }
+
+
+}
+
+
+
+
+
+/* ======================================
+   📱 ПЛАВНЫЙ ВХОД ПРИ ЗАГРУЗКЕ
+====================================== */
+
+
+body {
+
+
+    animation:
+
+    pageLoad .8s ease;
+
+
+}
+
+
+
+@keyframes pageLoad {
+
+
+    from {
+
+
+        opacity:0;
+
+
+    }
+
+
+    to {
+
+
+        opacity:1;
+
+
+    }
+
+
+}
