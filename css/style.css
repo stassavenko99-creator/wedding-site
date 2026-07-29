@@ -913,3 +913,167 @@ footer {
 
 
 }
+/* ======================================
+   📅 НОВЫЙ КАЛЕНДАРЬ
+====================================== */
+
+
+.calendar {
+
+    width: 100%;
+
+}
+
+
+
+.month {
+
+    font-size: 28px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.week {
+
+
+    display: grid;
+
+
+    grid-template-columns:
+
+    repeat(7, 1fr);
+
+
+    gap: 10px;
+
+
+    margin-bottom: 10px;
+
+
+}
+
+
+
+.week span {
+
+
+    font-size: 13px;
+
+    opacity: .6;
+
+
+}
+
+
+
+.calendar-grid {
+
+
+    display: grid;
+
+
+    grid-template-columns:
+
+    repeat(7, 1fr);
+
+
+    gap: 10px;
+
+
+}
+
+
+
+.calendar-grid span {
+
+
+    aspect-ratio: 1;
+
+
+    display: flex;
+
+
+    justify-content: center;
+
+
+    align-items: center;
+
+
+    border-radius: 50%;
+
+
+    font-size: 16px;
+
+
+    transition: .3s;
+
+
+}
+
+
+
+.calendar-grid span:hover {
+
+
+    background: rgba(255,255,255,.5);
+
+
+}
+
+
+
+/* 💍 День свадьбы */
+
+
+.wedding-day {
+
+
+    background: var(--pink);
+
+
+    color: white;
+
+
+    font-weight: bold;
+
+
+    transform: scale(1.15);
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.15);
+
+
+    animation:
+
+    pulseDate 2s infinite;
+
+
+}
+
+
+
+@keyframes pulseDate {
+
+
+    0%,100% {
+
+
+        transform: scale(1.15);
+
+    }
+
+
+    50% {
+
+
+        transform: scale(1.25);
+
+    }
+
+
+}
