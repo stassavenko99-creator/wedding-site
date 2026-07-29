@@ -1,1 +1,21 @@
+.location-pin {
 
+    font-size: 50px;
+    display: inline-block;
+
+    animation: pinFloat 2s ease-in-out infinite;
+
+}
+
+
+@keyframes pinFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
