@@ -1192,3 +1192,112 @@ footer {
 
 
 }
+/* ======================================
+   📍 МЕСТО СВАДЬБЫ
+====================================== */
+
+
+.location {
+
+    margin-top:40px;
+
+}
+
+
+
+.location-card {
+
+    text-align:center;
+
+}
+
+
+
+.location-icon {
+
+    font-size:45px;
+
+    animation: locationFloat 3s infinite;
+
+}
+
+
+
+@keyframes locationFloat {
+
+
+    0%,100% {
+
+        transform:translateY(0);
+
+    }
+
+
+    50% {
+
+        transform:translateY(-8px);
+
+    }
+
+
+}
+
+
+
+.location-card h3 {
+
+    font-size:32px;
+
+    margin:15px 0;
+
+}
+
+
+
+.location-card p {
+
+    line-height:1.6;
+
+    opacity:.7;
+
+}
+
+
+
+.map-button {
+
+
+    display:inline-block;
+
+    margin-top:25px;
+
+
+    padding:15px 35px;
+
+
+    border-radius:50px;
+
+
+    background:#E88E9F;
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.map-button:hover {
+
+
+    transform:scale(1.05);
+
+
+}
