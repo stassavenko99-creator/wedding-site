@@ -355,3 +355,106 @@ button:hover {
     }
 
 }
+.hero-names .name-left {
+
+    display:block;
+
+    animation:
+    comeFromLeft 1.2s ease forwards;
+
+}
+
+
+
+.hero-names .name-right {
+
+    display:block;
+
+    animation:
+    comeFromRight 1.2s ease forwards;
+
+}
+
+
+
+.hero-names .amp {
+
+    display:block;
+
+    animation:
+    appearAmp .8s ease forwards;
+
+    animation-delay:1s;
+
+    opacity:0;
+
+}
+
+
+
+@keyframes comeFromLeft {
+
+    from {
+
+        transform:translateX(-100vw);
+
+        opacity:0;
+
+    }
+
+
+    to {
+
+        transform:translateX(-20px);
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+@keyframes comeFromRight {
+
+    from {
+
+        transform:translateX(100vw);
+
+        opacity:0;
+
+    }
+
+
+    to {
+
+        transform:translateX(20px);
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+@keyframes appearAmp {
+
+    from {
+
+        transform:scale(0);
+
+        opacity:0;
+
+    }
+
+
+    to {
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
