@@ -1,1 +1,915 @@
+/*
+==========================================
 
+СТАС & НАСТЯ
+Wedding Website
+
+FILE:
+style.css
+
+VERSION:
+0.1
+
+Что здесь:
+✓ Цвета
+✓ Шрифты
+✓ Общий дизайн
+✓ Карточки
+✓ Мобильная версия
+
+==========================================
+*/
+
+
+
+/* ======================================
+   🎨 ОСНОВНЫЕ НАСТРОЙКИ
+====================================== */
+
+
+:root {
+
+    /* Фон */
+
+    --background: #FFFBF6;
+
+    --text: #343434;
+
+    --white: #ffffff;
+
+
+
+    /* Дофаминовые цвета */
+
+    --olive: #A8C29A;
+
+    --blue: #B1C4EB;
+
+    --purple-pink: #E695D2;
+
+    --pink: #E88E9F;
+
+    --soft-pink: #EEB5CE;
+
+    --apricot: #F2BA6C;
+
+    --mustard: #EED259;
+
+    --sky: #AED6E5;
+
+
+
+    /* Эффекты */
+
+    --radius: 36px;
+
+    --shadow:
+    0 20px 60px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+/* ======================================
+   RESET
+====================================== */
+
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family: "Manrope", sans-serif;
+
+}
+
+
+
+h1,
+h2,
+h3 {
+
+    font-family:
+    "Cormorant Garamond",
+    serif;
+
+    margin-top: 0;
+
+}
+
+
+
+p {
+
+    line-height: 1.6;
+
+}
+
+
+
+/* ======================================
+   ОБЩИЕ СЕКЦИИ
+====================================== */
+
+
+section {
+
+    min-height: 80vh;
+
+    padding:
+
+    80px 20px;
+
+
+    display:
+
+    flex;
+
+    justify-content:
+
+    center;
+
+    align-items:
+
+    center;
+
+}
+
+
+
+.section-card {
+
+    width:
+
+    min(100%, 600px);
+
+    background:
+
+    rgba(255,255,255,0.75);
+
+    backdrop-filter:
+
+    blur(20px);
+
+    border-radius:
+
+    var(--radius);
+
+    padding:
+
+    40px;
+
+    box-shadow:
+
+    var(--shadow);
+
+    text-align:
+
+    center;
+
+
+}
+
+
+
+/* ======================================
+   HERO
+====================================== */
+
+
+.hero {
+
+    min-height:
+
+    100vh;
+
+    position:
+
+    relative;
+
+    overflow:
+
+    hidden;
+
+}
+
+
+
+.hero-photo {
+
+
+    position:
+
+    absolute;
+
+    inset:
+
+    0;
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        var(--soft-pink),
+
+        var(--blue)
+
+    );
+
+
+    z-index:
+
+    -1;
+
+
+}
+
+
+
+.hero-content {
+
+
+    text-align:
+
+    center;
+
+    color:
+
+    white;
+
+
+}
+
+
+
+.hero h1 {
+
+
+    font-size:
+
+    clamp(70px, 15vw, 130px);
+
+
+    line-height:
+
+    0.8;
+
+    margin:
+
+    0;
+
+
+}
+
+
+
+.hero h1 span {
+
+
+    display:
+
+    block;
+
+    font-size:
+
+    0.5em;
+
+}
+
+
+
+.hero-date {
+
+
+    font-size:
+
+    26px;
+
+    margin-top:
+
+    40px;
+
+
+}
+
+
+
+/* кнопка музыки */
+
+
+.music-button {
+
+
+    margin-top:
+
+    40px;
+
+
+    border:
+
+    none;
+
+
+    padding:
+
+    16px 32px;
+
+
+    border-radius:
+
+    100px;
+
+
+    background:
+
+    white;
+
+
+    color:
+
+    var(--text);
+
+
+    font-size:
+
+    16px;
+
+
+    cursor:
+
+    pointer;
+
+
+    transition:
+
+    0.3s;
+
+
+}
+
+
+
+.music-button:hover {
+
+
+    transform:
+
+    scale(1.05);
+
+
+}
+
+
+
+/* стрелка вниз */
+
+
+.scroll-down {
+
+
+    position:
+
+    absolute;
+
+
+    bottom:
+
+    30px;
+
+
+    left:
+
+    50%;
+
+
+    transform:
+
+    translateX(-50%);
+
+
+    font-size:
+
+    40px;
+
+
+    animation:
+
+    bounce 2s infinite;
+
+
+}
+
+
+
+
+@keyframes bounce {
+
+
+    0%,100% {
+
+        transform:
+        translate(-50%,0);
+
+    }
+
+
+    50% {
+
+        transform:
+        translate(-50%,15px);
+
+    }
+
+}
+
+
+
+/* ======================================
+   КАЛЕНДАРЬ
+====================================== */
+
+
+.calendar-card {
+
+
+    background:
+
+    var(--mustard);
+
+
+}
+
+
+
+.month {
+
+
+    font-size:
+
+    28px;
+
+    margin-bottom:
+
+    20px;
+
+}
+
+
+
+.days {
+
+
+    display:
+
+    grid;
+
+
+    grid-template-columns:
+
+    repeat(7,1fr);
+
+
+    gap:
+
+    10px;
+
+
+}
+
+
+
+.days span {
+
+
+    font-size:
+
+    14px;
+
+}
+
+
+
+.selected-date {
+
+
+    margin:
+
+    30px auto 0;
+
+
+    width:
+
+    80px;
+
+
+    height:
+
+    80px;
+
+
+    border-radius:
+
+    50%;
+
+
+    display:
+
+    flex;
+
+
+    align-items:
+
+    center;
+
+
+    justify-content:
+
+    center;
+
+
+    background:
+
+    var(--pink);
+
+
+    color:
+
+    white;
+
+
+    font-size:
+
+    40px;
+
+
+}
+
+
+
+/* ======================================
+   LOCATION
+====================================== */
+
+
+.location .section-card {
+
+
+    background:
+
+    var(--sky);
+
+
+}
+
+
+
+/* ======================================
+   TIMELINE
+====================================== */
+
+
+.timeline .section-card {
+
+
+    background:
+
+    var(--olive);
+
+
+}
+
+
+
+.timeline-item {
+
+
+    display:
+
+    flex;
+
+
+    justify-content:
+
+    space-between;
+
+
+    align-items:
+
+    center;
+
+
+    padding:
+
+    20px;
+
+
+    background:
+
+    rgba(255,255,255,.5);
+
+
+    border-radius:
+
+    20px;
+
+
+    margin-bottom:
+
+    15px;
+
+
+}
+
+
+
+
+/* ======================================
+   ДРЕСС-КОД
+====================================== */
+
+
+.dress-code .section-card {
+
+
+    background:
+
+    var(--purple-pink);
+
+
+}
+
+
+
+.colors {
+
+
+    display:
+
+    flex;
+
+
+    justify-content:
+
+    center;
+
+
+    gap:
+
+    15px;
+
+
+}
+
+
+
+.colors div {
+
+
+    width:
+
+    45px;
+
+
+    height:
+
+    45px;
+
+
+    border-radius:
+
+    50%;
+
+
+}
+
+
+.colors div:nth-child(1){
+
+    background:
+
+    var(--olive);
+
+}
+
+
+.colors div:nth-child(2){
+
+    background:
+
+    var(--blue);
+
+}
+
+
+.colors div:nth-child(3){
+
+    background:
+
+    var(--pink);
+
+}
+
+
+.colors div:nth-child(4){
+
+    background:
+
+    var(--apricot);
+
+}
+
+
+.colors div:nth-child(5){
+
+    background:
+
+    var(--mustard);
+
+}
+
+
+
+
+/* ======================================
+   ФОРМА
+====================================== */
+
+
+.rsvp .section-card {
+
+
+    background:
+
+    var(--soft-pink);
+
+
+}
+
+
+
+input,
+textarea {
+
+
+    width:
+
+    100%;
+
+
+    padding:
+
+    16px;
+
+
+    border:
+
+    none;
+
+
+    border-radius:
+
+    20px;
+
+
+    margin:
+
+    10px 0;
+
+
+    font-family:
+
+    inherit;
+
+
+}
+
+
+
+form button {
+
+
+    padding:
+
+    15px 30px;
+
+
+    border:
+
+    none;
+
+
+    border-radius:
+
+    100px;
+
+
+    background:
+
+    white;
+
+
+    cursor:
+
+    pointer;
+
+
+}
+
+
+
+/* ======================================
+   FOOTER
+====================================== */
+
+
+footer {
+
+
+    padding:
+
+    50px;
+
+
+    text-align:
+
+    center;
+
+
+    font-size:
+
+    24px;
+
+
+}
+
+
+
+
+/* ======================================
+   📱 МОБИЛЬНАЯ ВЕРСИЯ
+====================================== */
+
+
+@media(max-width:600px){
+
+
+    section {
+
+        padding:
+
+        50px 15px;
+
+    }
+
+
+    .section-card {
+
+
+        padding:
+
+        30px 20px;
+
+
+        border-radius:
+
+        28px;
+
+    }
+
+
+    .hero h1 {
+
+
+        font-size:
+
+        80px;
+
+    }
+
+
+}
