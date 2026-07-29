@@ -224,13 +224,36 @@ button:hover {
 
 
 
+.hero-names {
+
+    font-family:
+    "Bodoni Moda",
+    serif;
+
+    font-size:
+    clamp(80px, 18vw, 220px);
+
+    line-height:.75;
+
+    letter-spacing:-6px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+
 .name-left {
 
-    transform:
-    translateX(-80px);
+    transform:translateX(-120vw);
 
     animation:
-    nameLeft 1.2s ease forwards;
+    slideLeft 1.4s cubic-bezier(.16,1,.3,1) forwards;
 
 }
 
@@ -238,11 +261,12 @@ button:hover {
 
 .name-right {
 
-    transform:
-    translateX(80px);
+    transform:translateX(120vw);
 
     animation:
-    nameRight 1.2s ease forwards;
+    slideRight 1.4s cubic-bezier(.16,1,.3,1) forwards;
+
+    animation-delay:.2s;
 
 }
 
@@ -250,9 +274,61 @@ button:hover {
 
 .amp {
 
-    font-size:.5em;
+    opacity:0;
 
-    margin:-10px 0;
+    transform:scale(0);
+
+    animation:
+    ampAppear .8s ease forwards;
+
+    animation-delay:1.2s;
+
+}
+
+
+
+@keyframes slideLeft {
+
+    to {
+
+        transform:translateX(-20px);
+
+    }
+
+}
+
+
+
+@keyframes slideRight {
+
+    to {
+
+        transform:translateX(20px);
+
+    }
+
+}
+
+
+
+@keyframes ampAppear {
+
+    from {
+
+        opacity:0;
+
+        transform:scale(0) rotate(-180deg);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:scale(1) rotate(0);
+
+    }
 
 }
 
