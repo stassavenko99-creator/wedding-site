@@ -1074,3 +1074,121 @@ footer {
         transform: scale(1.25);
 
     }
+/* ======================================
+   💍 ТАЙМЕР
+====================================== */
+
+
+.timer-section {
+
+    margin-top: 40px;
+
+}
+
+
+
+.timer-card {
+
+    text-align: center;
+
+}
+
+
+
+.ring {
+
+    font-size: 40px;
+
+    animation: ringMove 3s infinite;
+
+}
+
+
+
+@keyframes ringMove {
+
+
+    0%,100% {
+
+        transform: rotate(0deg);
+
+    }
+
+
+    50% {
+
+        transform: rotate(15deg);
+
+    }
+
+
+}
+
+
+
+.timer {
+
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+}
+
+
+
+.time-box {
+
+
+    background:
+
+    rgba(255,255,255,.45);
+
+
+    backdrop-filter:
+
+    blur(15px);
+
+
+    width: 75px;
+
+    height: 85px;
+
+
+    border-radius: 25px;
+
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+
+}
+
+
+
+.time-box span {
+
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+
+}
+
+
+
+.time-box small {
+
+
+    opacity: .7;
+
+
+}
